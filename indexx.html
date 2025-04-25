@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Kritika Dhodari"/>
+  <title>Kritika| CV & Portfolio</title>
+  <link rel="stylesheet" href="styles/stylee.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="brand">Kritika</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-items" id="nav-items">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="section about">
+    <div class="about-content">
+      <div class="about-text">
+        <h1>Kritika </h1>
+        <p class="subtitle">Aspiring BIM Graduate & Web Developer</p>
+        <p>A motivated web developer skilled in HTML, CSS, JavaScript, and Figma. Passionate about crafting intuitive UI/UX and responsive, accessible web applications.</p>
+      </div>
+      <div class="about-image" style="background-image: url('../portfolio/assets/images/Screenshot_4.png"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="card">
+      <h3>Bachelor of Information Management (BIM)</h3>
+      <p>Hetauda School of Management & Social Sciences (TU)<br/><em>2023 – Present</em></p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li>HTML & CSS</li>
+      <li>JavaScript (ES6+)</li>
+      <li>UI/UX Design (Figma)</li>
+      <li>Responsive Layout</li>
+      <li>Git & GitHub</li>
+      <li>Team Collaboration</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="tabs">
+      <button id="exp-1" class="tab active" onclick="showExp('exp-1-content')">ABC Tech</button>
+      <button id="exp-2" class="tab" onclick="showExp('exp-2-content')">Hackathon</button>
+      <button id="exp-3" class="tab" onclick="showExp('exp-3-content')">IT Club</button>
+    </div>
+    <div class="tab-content">
+      <div id="exp-1-content">
+        <h3>Frontend Intern at ABC Tech (2023–Ongoing)</h3>
+        <p>Building responsive UIs with HTML, CSS & vanilla JS; collaborating on design sprints.</p>
+      </div>
+      <div id="exp-2-content" class="hidden">
+        <h3> Participant at HSMS Hackathon (2024)</h3>
+        <p>Developed a smart campus solution in a 48-hour team sprint. <a href="#projects">See Project</a></p>
+      </div>
+      <div id="exp-3-content" class="hidden">
+        <h3>Graphics Designer at IT Club HSMS (2023–24)</h3>
+        <p>Created social media assets, event posters, and improved brand engagement by 30%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>SMS (2024)</h3>
+        <p>Web-based Student Management System (CRUD) using HTML, CSS, JS.</p>
+        <a href="#">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>GroceryHall (Figma, 2024)</h3>
+        <p>Interactive Figma prototype for an online grocery platform.</p>
+        <a href="#">View Prototype</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="section">
+    <h2 class="section-title">Certificates</h2>
+    <div class="card">
+      <h3>UI/UX Workshop</h3>
+      <p>Completed 10-day intensive course @ HSMS (2024)</p>
+      <a href="certificates/uiux-workshop.pdf" target="_blank" class="btn">View Certificate</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <div><strong>Phone:</strong><br/>+977 9860000000</div>
+      <div><strong>Email:</strong><br/><a href="mailto:kritika@hsmss.edu.np">kritika@hsmss.edu.np</a></div>
+      <div><strong>Location:</strong><br/>Hetauda, Nepal</div>
+      <div><strong>LinkedIn:</strong><br/><a href="https://www.linkedin.com/in/kritikafolio" target="_blank">linkedin.com/in/kritikafolio</a></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Kritika Dhodari
+  </footer>
+
+  <script src="scripts/scriptt.js"></script>
+
+</body>
+</html>

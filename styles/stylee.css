@@ -1,0 +1,153 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --primary: blue;        /* tomato */
+  --secondary: green;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+  --card-shadow: rgba(0,0,0,0.1);
+  --radius: 8px;
+  --transition: 0.3s;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.nav {
+  background: var(--primary);
+  position: sticky; top: 0; z-index: 10;
+}
+.nav-container {
+  max-width: 1100px; margin: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem;
+}
+.brand { color: var(--text-light); font-size: 1.5rem; font-weight: 700; }
+.hamburger {
+  display: none; flex-direction: column; gap: 4px; background: none; border: none;
+}
+.hamburger span {
+  display: block; width: 24px; height: 3px; background: var(--text-light); border-radius: 2px;
+}
+.nav-items { list-style: none; display: flex; gap: 1.5rem; }
+.nav-items li a {
+  color: var(--text-light); text-decoration: none; font-weight: 600;
+  transition: color var(--transition);
+}
+.nav-items li a:hover { color: var(--secondary); }
+
+/* SECTION WRAPPER */
+.section {
+  max-width: 1100px; margin: 3rem auto; padding: 0 1rem;
+}
+.section-title {
+  font-size: 1.75rem; margin-bottom: 1rem; color: var(--primary);
+}
+
+/* ABOUT */
+.about-content {
+  display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+}
+.about-text { flex: 1 1 300px; }
+.subtitle { color: var(--secondary); font-weight: 600; margin: 0.5rem 0; }
+.about-image {
+  flex: 0 0 200px; height: 200px; background-size: cover;
+  background-position: center; border-radius: var(--radius);
+  box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+/* CARDS */
+.card {
+  background: #fff; padding: 1.5rem; border-radius: var(--radius);
+  box-shadow: 0 4px 15px var(--card-shadow); margin-bottom: 1rem;
+}
+
+/* SKILLS */
+.skills-list {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+}
+.skills-list li {
+  background: var(--secondary); color: var(--text-light);
+  padding: 0.5rem 1rem; border-radius: var(--radius);
+  font-weight: 500;
+}
+
+/* TABS (Experience) */
+.tabs {
+  display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.tab {
+  padding: 0.5rem 1rem; border: 1px solid var(--primary);
+  border-radius: var(--radius); background: #fff; cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.tab.active { background: var(--primary); color: var(--text-light); }
+.tab-content > div { display: none; }
+.tab-content > div:not(.hidden) { display: block; }
+
+/* PROJECTS */
+.projects-grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: #fff; padding: 1rem; border-radius: var(--radius);
+  box-shadow: 0 4px 15px var(--card-shadow);
+}
+.project-card h3 { margin-bottom: 0.5rem; }
+.project-card a {
+  display: inline-block; margin-top: 0.5rem;
+  color: var(--primary); text-decoration: underline;
+}
+
+/* CONTACT */
+.contact-grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem;
+  background: var(--primary); color: var(--text-light); border-radius: var(--radius);
+  text-decoration: none; transition: background var(--transition);
+}
+.btn:hover { background: var(--secondary); }
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 1rem; font-size: 0.9rem;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-items {
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--primary); flex-direction: column;
+    padding: 1rem; display: none;
+  }
+  .nav-items.active { display: flex; }
+}
+@media (max-width: 768px) {
+    /* Adjust styles for mobile devices */
+    .nav-items {
+      display: block;
+    }
+    .about-image {
+      background-size: cover;
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  
